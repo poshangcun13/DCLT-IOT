@@ -125,130 +125,149 @@
   </button>
 
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            
-            <h1 class="title is-1 publication-title">Edge-Deployable Brainprint Authentication for Resource-Constrained IoT: A Differentiable Structure Learning Framework</h1>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="#" target="_blank">Menghao Fang</a><sup>1,*</sup>,</span>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              
+              <h1 class="title is-1 publication-title">Edge-Deployable Brainprint Authentication for Resource-Constrained IoT: A Differentiable Structure Learning Framework</h1>
+              
+              <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  <a href="#" target="_blank">Yuanyuan Wang</a><sup>2,*</sup>,</span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Junyao Chen</a><sup>1</sup>,
-                  </span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Zhaojie Lin</a><sup>1</sup>,
-                  </span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Xiangyu Yan</a><sup>1</sup>,
-                  </span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Haojun Fan</a><sup>1,†</sup>,
-                  </span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Lulu</a><sup>1,†</sup>
-                  </span>
-                  </div>
+                  <a href="#" target="_blank">Menghao Fang</a><sup>1,*</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="#" target="_blank">Yuanyuan Wang</a><sup>2,*</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="#" target="_blank">Junyao Chen</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="#" target="_blank">Zhaojie Lin</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="#" target="_blank">Xiangyu Yan</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="#" target="_blank">Haojun Fan</a><sup>1,†</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="#" target="_blank">Lulu</a><sup>1,†</sup>
+                </span>
+              </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>School of Disaster and Emergency Medicine, Tianjin University<br><sup>2</sup>College of Science, Tianjin University of Technology<br>IEEE Internet of Things Journal,2026</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution | <sup>†</sup>Corresponding Authors</small></span>
-                  </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>School of Disaster and Emergency Medicine, Tianjin University<br><sup>2</sup>College of Science, Tianjin University of Technology<br>IEEE Internet of Things Journal, 2026</span>
+                <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution | <sup>†</sup>Corresponding Authors</small></span>
+              </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                      <span class="link-block">
-                        <a href="static/pdfs/Brainprint_Recognition.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="static/pdfs/Brainprint_Recognition.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
 
                   <span class="link-block">
-                    <a href="https://github.com/poshangcun13/DCLT.git" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+                    <a href="https://github.com/poshangcun13/DCLT.git" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            High-precision Electroencephalogram (EEG) analysis typically relies on dense multi-channel arrays, creating a fundamental conflict with the strict low-channel and low-power budgets of Internet of Things (IoT) edge devices. This bottleneck severely hinders the practical deployment of emerging wearable Brainprint Authentication systems. Furthermore, existing channel selection methods often lack end-to-end optimization and mechanistic interpretability. To address these challenges, we propose the Dynamic Channel Learning Transformer (DCLT), a unified framework formulating EEG channel selection as Differentiable Structure Learning tailored for IoT-based brainprint recognition. DCLT employs a Straight-Through Estimator (STE)-driven Top-K discrete gating mechanism, achieving a unified optimization of hard physical channel constraints and continuous gradient updates. A Transformer architecture then globally models the reconstructed sparse features. Furthermore, we introduce Dynamic-Static Consistency Analysis to evaluate the model's structural stability and hardware deployability beyond mere predictive accuracy. Extensive experiments across three datasets demonstrate that DCLT maintains over 90% identification accuracy while retaining only 25% of the original channels. Finally, edge-constrained deployment on clinical-grade data from 23 subjects confirms that DCLT significantly reduces computational complexity and inference latency. Ultimately, DCLT advances EEG analysis from feature learning to structure learning, enabling robust and lightweight IoT brain-computer interfaces.
-          </p>
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                High-precision Electroencephalogram (EEG) analysis typically relies on dense multi-channel arrays, creating a fundamental conflict with the strict low-channel and low-power budgets of Internet of Things (IoT) edge devices. This bottleneck severely hinders the practical deployment of emerging wearable Brainprint Authentication systems. Furthermore, existing channel selection methods often lack end-to-end optimization and mechanistic interpretability. To address these challenges, we propose the Dynamic Channel Learning Transformer (DCLT), a unified framework formulating EEG channel selection as Differentiable Structure Learning tailored for IoT-based brainprint recognition. DCLT employs a Straight-Through Estimator (STE)-driven Top-K discrete gating mechanism, achieving a unified optimization of hard physical channel constraints and continuous gradient updates. A Transformer architecture then globally models the reconstructed sparse features. Furthermore, we introduce Dynamic-Static Consistency Analysis to evaluate the model's structural stability and hardware deployability beyond mere predictive accuracy. Extensive experiments across three datasets demonstrate that DCLT maintains over 90% identification accuracy while retaining only 25% of the original channels. Finally, edge-constrained deployment on clinical-grade data from 23 subjects confirms that DCLT significantly reduces computational complexity and inference latency. Ultimately, DCLT advances EEG analysis from feature learning to structure learning, enabling robust and lightweight IoT brain-computer interfaces.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<section class="hero is-small">
-  <div class="hero-body">
+    </section>
+
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3 has-text-centered">Methodology & Results</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <img src="static/images/dclt_architecture.png" alt="DCLT Framework Architecture" loading="lazy"/>
+              <h2 class="subtitle has-text-centered">
+                Schematic diagram of the overall architecture of the DCLT framework, illustrating the unified "differentiable structure learning + global modeling" approach.
+              </h2>
+            </div>
+            <div class="item">
+              <img src="static/images/eeg_acquisition.png" alt="Real-world EEG Data Acquisition" loading="lazy"/>
+              <h2 class="subtitle has-text-centered">
+                Real-world EEG data acquisition environment and edge-oriented deployment validation involving 23 subjects.
+              </h2>
+            </div>
+            <div class="item">
+              <img src="static/images/consistency_evolution.png" alt="Performance consistency evolution" loading="lazy"/>
+              <h2 class="subtitle has-text-centered">
+                Performance consistency evolution between dynamic routing and global static subsets under varying channel budgets.
+              </h2>
+            </div>
+            <div class="item">
+              <img src="static/images/electrode_frequency.png" alt="Electrode Frequency Distribution" loading="lazy"/>
+              <h2 class="subtitle has-text-centered">
+                Visualization of the selected electrode frequencies across different functional brain regions.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+        </div>
+        <pre id="bibtex-code"><code>@article{fang2026edge,
+  title={Edge-Deployable Brainprint Authentication for Resource-Constrained IoT: A Differentiable Structure Learning Framework},
+  author={Fang, Menghao and Wang, Yuanyuan and Chen, Junyao and Lin, Zhaojie and Yan, Xiangyu and Fan, Haojun and Lulu},
+  journal={IEEE Internet of Things Journal},
+  volume={14},
+  number={8},
+  year={2026},
+  publisher={IEEE}
+}</code></pre>
+      </div>
+    </section>
+
+  </main> <footer class="footer">
     <div class="container">
-      <h2 class="title is-3 has-text-centered">Methodology & Results</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <img src="static/images/carousel1.jpg" alt="DCLT Framework Architecture" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Schematic diagram of the overall architecture of the DCLT framework, illustrating the unified "differentiable structure learning + global modeling" approach.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/carousel2.jpg" alt="Real-world EEG Data Acquisition" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Real-world EEG data acquisition environment and edge-oriented deployment validation involving 23 subjects.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/carousel3.jpg" alt="Performance consistency evolution" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Performance consistency evolution between dynamic routing and global static subsets under varying channel budgets.
-       </h2>
-     </div>
-     <div class="item">
-      <img src="static/images/carousel4.jpg" alt="Electrode Frequency Distribution" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Visualization of the selected electrode frequencies across different functional brain regions.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
-  </body>
-  </html>
+  </footer>
+</body>
+</html>
