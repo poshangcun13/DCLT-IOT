@@ -198,6 +198,7 @@
     </section>
 
     <!-- Methodology & Results Section -->
+<!-- Methodology & Results -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -209,11 +210,11 @@
       <div id="results-carousel" class="carousel results-carousel">
 
         <!-- Item 1 -->
-        <div class="item">
+        <div class="item has-text-centered">
           <img
-            class="carousel-image"
             src="static/images/carousel1.jpg"
             alt="DCLT Framework Architecture"
+            class="result-image"
             loading="lazy"
           />
 
@@ -224,11 +225,11 @@
         </div>
 
         <!-- Item 2 -->
-        <div class="item">
+        <div class="item has-text-centered">
           <img
-            class="carousel-image"
             src="static/images/carousel2.jpg"
             alt="Real-world EEG Data Acquisition"
+            class="result-image"
             loading="lazy"
           />
 
@@ -239,11 +240,11 @@
         </div>
 
         <!-- Item 3 -->
-        <div class="item">
+        <div class="item has-text-centered">
           <img
-            class="carousel-image"
             src="static/images/carousel3.jpg"
             alt="Performance consistency evolution"
+            class="result-image"
             loading="lazy"
           />
 
@@ -254,11 +255,11 @@
         </div>
 
         <!-- Item 4 -->
-        <div class="item">
+        <div class="item has-text-centered">
           <img
-            class="carousel-image"
             src="static/images/carousel4.jpg"
             alt="Electrode Frequency Distribution"
+            class="result-image"
             loading="lazy"
           />
 
@@ -273,70 +274,47 @@
   </div>
 </section>
 
-<!-- Custom Carousel Style -->
 <style>
-  /* 整个轮播项 */
-  .results-carousel .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+  /* 统一轮播图片大小 */
+  .result-image {
+    width: 1000px;
+    height: 600px;
 
-    height: 700px; /* 固定整体高度，防止页面跳动 */
-    padding: 10px;
+    object-fit: contain; /* 不裁剪图片 */
+
+    display: block;
+    margin: 0 auto;
+
+    background-color: white;
   }
 
-  /* 图片统一 */
-  .carousel-image {
-    width: 100%;
-    max-width: 1100px;
-
-    height: 560px; /* 统一图片高度 */
-    object-fit: contain; /* 完整显示图片 */
-
-    background-color: #ffffff;
-
-    border-radius: 12px;
-
-    box-shadow:
-      0 4px 10px rgba(0,0,0,0.08);
-
-    transition: transform 0.3s ease;
-  }
-
-  /* 鼠标悬停动画 */
-  .carousel-image:hover {
-    transform: scale(1.01);
-  }
-
-  /* 文字描述 */
+  /* 统一文字区域 */
   .results-carousel .subtitle {
-    margin-top: 20px;
+    margin-top: 15px;
+    min-height: 80px;
 
     max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 
-    min-height: 70px;
-
-    font-size: 1rem;
     line-height: 1.6;
-
-    color: #555;
   }
 
-  /* 移动端适配 */
+  /* 防止轮播高度跳动 */
+  .results-carousel .item {
+    height: 750px;
+  }
+
+  /* 手机端 */
   @media screen and (max-width: 768px) {
 
-    .results-carousel .item {
-      height: auto;
-    }
-
-    .carousel-image {
+    .result-image {
+      width: 100%;
       height: 300px;
     }
 
-    .results-carousel .subtitle {
-      min-height: auto;
-      font-size: 0.95rem;
+    .results-carousel .item {
+      height: auto;
     }
   }
 </style>
