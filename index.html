@@ -228,6 +228,8 @@
 <!-- Methodology & Results -->
 <!-- ===================== Methodology Carousel ===================== -->
 
+<!-- ===================== Methodology ===================== -->
+
 <!-- Bulma Carousel CSS -->
 <link rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/css/bulma-carousel.min.css">
@@ -237,114 +239,167 @@ href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/css/bulma-carousel
 src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js"></script>
 
 
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
+<section class="section">
 
-      <h2 class="title is-3 has-text-centered">
-        Methodology
-      </h2>
+  <div class="container is-max-desktop">
 
-      <!-- Carousel -->
-      <div id="results-carousel" class="carousel">
+    <!-- Title -->
+    <h2 class="title is-3 has-text-centered mb-6">
+      Methodology
+    </h2>
 
-        <!-- Item 1 -->
-        <div class="item has-text-centered">
+    <!-- Carousel -->
+    <div id="results-carousel" class="carousel">
 
-          <div class="image-container">
+      <!-- ===================== Item 1 ===================== -->
+      <div class="item">
+
+        <div class="method-card">
+
+          <div class="image-wrapper">
             <img
               src="static/images/carousel1.jpg"
               alt="DCLT Framework Architecture"
-              class="result-image"
-            />
+              class="method-image"
+            >
           </div>
 
-          <h2 class="subtitle has-text-centered">
+          <div class="method-text">
             Schematic diagram of the overall architecture of the DCLT framework,
-            illustrating the unified "differentiable structure learning + global modeling" approach.
-          </h2>
-
-        </div>
-
-        <!-- Item 2 -->
-        <div class="item has-text-centered">
-
-          <div class="image-container">
-            <img
-              src="static/images/carousel2.jpg"
-              alt="Real-world EEG Data Acquisition"
-              class="result-image"
-            />
+            illustrating the unified differentiable structure learning and global modeling paradigm.
           </div>
-
-          <h2 class="subtitle has-text-centered">
-            Real-world EEG data acquisition environment and edge-oriented deployment
-            validation involving 23 subjects.
-          </h2>
-
-        </div>
-
-        <!-- Item 3 -->
-        <div class="item has-text-centered">
-
-          <div class="image-container">
-            <img
-              src="static/images/carousel3.jpg"
-              alt="Performance consistency evolution"
-              class="result-image"
-            />
-          </div>
-
-          <h2 class="subtitle has-text-centered">
-            Performance consistency evolution between dynamic routing and global
-            static subsets under varying channel budgets.
-          </h2>
-
-        </div>
-
-        <!-- Item 4 -->
-        <div class="item has-text-centered">
-
-          <div class="image-container">
-            <img
-              src="static/images/carousel4.jpg"
-              alt="Electrode Frequency Distribution"
-              class="result-image"
-            />
-          </div>
-
-          <h2 class="subtitle has-text-centered">
-            Statistics of Electrode Selection Frequency During the Channel Selection Process Across Different Datasets.
-          </h2>
 
         </div>
 
       </div>
+
+
+      <!-- ===================== Item 2 ===================== -->
+      <div class="item">
+
+        <div class="method-card">
+
+          <div class="image-wrapper">
+            <img
+              src="static/images/carousel2.jpg"
+              alt="Real-world EEG Data Acquisition"
+              class="method-image"
+            >
+          </div>
+
+          <div class="method-text">
+            Real-world EEG data acquisition environment and edge-oriented deployment
+            validation involving 23 subjects.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ===================== Item 3 ===================== -->
+      <div class="item">
+
+        <div class="method-card">
+
+          <div class="image-wrapper">
+            <img
+              src="static/images/carousel3.jpg"
+              alt="Performance consistency evolution"
+              class="method-image"
+            >
+          </div>
+
+          <div class="method-text">
+            Performance consistency evolution between dynamic routing and global
+            static subsets under varying channel budgets.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ===================== Item 4 ===================== -->
+      <div class="item">
+
+        <div class="method-card">
+
+          <div class="image-wrapper">
+            <img
+              src="static/images/carousel4.jpg"
+              alt="Electrode Frequency Distribution"
+              class="method-image"
+            >
+          </div>
+
+          <div class="method-text">
+            Statistics of electrode selection frequency during the channel selection
+            process across different datasets.
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
+
   </div>
+
 </section>
 
 
-<!-- ===================== Carousel Style ===================== -->
+<!-- ===================== Style ===================== -->
 
 <style>
 
   /* Carousel overall */
   #results-carousel {
-    margin-top: 30px;
+
+    margin-top: 20px;
+
+    overflow: hidden;
   }
 
-  /* Each item */
+  /* Hide extra preview slides */
+  #results-carousel .carousel-container {
+
+    overflow: hidden !important;
+  }
+
+  /* Each slide */
   #results-carousel .item {
-    min-height: 760px;
-    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
   }
 
-  /* Image container */
-  .image-container {
+  /* Main card */
+  .method-card {
 
     width: 100%;
-    height: 600px;
+    max-width: 1100px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+      0 10px 30px rgba(0,0,0,0.08);
+
+    padding: 30px;
+
+    transition: all 0.3s ease;
+  }
+
+  /* Image area */
+  .image-wrapper {
+
+    width: 100%;
+    height: 580px;
 
     display: flex;
     align-items: center;
@@ -353,55 +408,111 @@ src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.m
     overflow: hidden;
   }
 
-  /* Image adaptive display */
-  .result-image {
+  /* Image */
+  .method-image {
 
-    max-width: 100%;
-    max-height: 100%;
-
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
 
     object-fit: contain;
 
     border-radius: 12px;
   }
 
-  /* Text */
-  .subtitle {
+  /* Description */
+  .method-text {
 
-    margin-top: 20px;
+    margin-top: 24px;
 
-    max-width: 1000px;
+    text-align: center;
 
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1.05rem;
 
-    min-height: 80px;
+    line-height: 1.8;
 
-    line-height: 1.6;
+    color: #444;
 
-    font-size: 1rem;
+    padding: 0 20px;
   }
 
-  /* Mobile adaptation */
+  /* Navigation buttons beautify */
+  .carousel-nav-left,
+  .carousel-nav-right {
+
+    background: rgba(255,255,255,0.95) !important;
+
+    border-radius: 50% !important;
+
+    box-shadow:
+      0 4px 12px rgba(0,0,0,0.12);
+
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  /* Pagination dots */
+  .carousel-pagination .pagination-link {
+
+    background: #d0d0d0 !important;
+  }
+
+  .carousel-pagination .pagination-link.is-active {
+
+    background: #3273dc !important;
+  }
+
+  /* Mobile */
   @media screen and (max-width: 768px) {
 
-    .image-container {
-      height: 300px;
+    .method-card {
+
+      padding: 18px;
     }
 
-    #results-carousel .item {
-      min-height: auto;
+    .image-wrapper {
+
+      height: 280px;
     }
 
-    .subtitle {
+    .method-text {
+
       font-size: 0.95rem;
-      padding: 0 10px;
+
+      padding: 0;
     }
   }
 
 </style>
+
+
+<!-- ===================== Carousel Init ===================== -->
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  bulmaCarousel.attach('#results-carousel', {
+
+    slidesToScroll: 1,
+    slidesToShow: 1,
+
+    loop: true,
+
+    infinite: true,
+
+    autoplay: true,
+    autoplaySpeed: 3500,
+
+    pauseOnHover: true,
+
+    pagination: true,
+    navigation: true,
+
+  });
+
+});
+
+</script>
 
 
 <!-- ===================== Carousel Initialization ===================== -->
