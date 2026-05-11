@@ -226,6 +226,17 @@
     </section>
 
 <!-- Methodology & Results -->
+<!-- ===================== Methodology Carousel ===================== -->
+
+<!-- Bulma Carousel CSS -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/css/bulma-carousel.min.css">
+
+<!-- Bulma Carousel JS -->
+<script defer
+src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js"></script>
+
+
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -234,16 +245,17 @@
         Methodology
       </h2>
 
-      <div id="results-carousel" class="carousel results-carousel">
+      <!-- Carousel -->
+      <div id="results-carousel" class="carousel">
 
         <!-- Item 1 -->
         <div class="item has-text-centered">
+
           <div class="image-container">
             <img
               src="static/images/carousel1.jpg"
               alt="DCLT Framework Architecture"
               class="result-image"
-              loading="lazy"
             />
           </div>
 
@@ -251,16 +263,17 @@
             Schematic diagram of the overall architecture of the DCLT framework,
             illustrating the unified "differentiable structure learning + global modeling" approach.
           </h2>
+
         </div>
 
         <!-- Item 2 -->
         <div class="item has-text-centered">
+
           <div class="image-container">
             <img
               src="static/images/carousel2.jpg"
               alt="Real-world EEG Data Acquisition"
               class="result-image"
-              loading="lazy"
             />
           </div>
 
@@ -268,16 +281,17 @@
             Real-world EEG data acquisition environment and edge-oriented deployment
             validation involving 23 subjects.
           </h2>
+
         </div>
 
         <!-- Item 3 -->
         <div class="item has-text-centered">
+
           <div class="image-container">
             <img
               src="static/images/carousel3.jpg"
               alt="Performance consistency evolution"
               class="result-image"
-              loading="lazy"
             />
           </div>
 
@@ -285,22 +299,24 @@
             Performance consistency evolution between dynamic routing and global
             static subsets under varying channel budgets.
           </h2>
+
         </div>
 
         <!-- Item 4 -->
         <div class="item has-text-centered">
+
           <div class="image-container">
             <img
               src="static/images/carousel4.jpg"
               alt="Electrode Frequency Distribution"
               class="result-image"
-              loading="lazy"
             />
           </div>
 
           <h2 class="subtitle has-text-centered">
             Statistics of Electrode Selection Frequency During the Channel Selection Process Across Different Datasets.
           </h2>
+
         </div>
 
       </div>
@@ -308,11 +324,27 @@
   </div>
 </section>
 
+
+<!-- ===================== Carousel Style ===================== -->
+
 <style>
-  /* 固定图片区高度 */
+
+  /* Carousel overall */
+  #results-carousel {
+    margin-top: 30px;
+  }
+
+  /* Each item */
+  #results-carousel .item {
+    min-height: 760px;
+    padding: 10px;
+  }
+
+  /* Image container */
   .image-container {
+
     width: 100%;
-    height: 600px;   /* 这里只固定高度 */
+    height: 600px;
 
     display: flex;
     align-items: center;
@@ -321,48 +353,85 @@
     overflow: hidden;
   }
 
-  /* 图片自适应 */
+  /* Image adaptive display */
   .result-image {
+
     max-width: 100%;
     max-height: 100%;
 
     width: auto;
     height: auto;
 
-    object-fit: contain; /* 不裁剪 */
+    object-fit: contain;
+
+    border-radius: 12px;
   }
 
-  /* 文字区域 */
-  .results-carousel .subtitle {
+  /* Text */
+  .subtitle {
+
     margin-top: 20px;
 
     max-width: 1000px;
+
     margin-left: auto;
     margin-right: auto;
 
     min-height: 80px;
 
     line-height: 1.6;
+
+    font-size: 1rem;
   }
 
-  /* 防止轮播整体跳动 */
-  .results-carousel .item {
-    height: 760px;
-  }
-
-  /* 手机端 */
+  /* Mobile adaptation */
   @media screen and (max-width: 768px) {
 
     .image-container {
       height: 300px;
     }
 
-    .results-carousel .item {
-      height: auto;
+    #results-carousel .item {
+      min-height: auto;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      padding: 0 10px;
     }
   }
+
 </style>
 
+
+<!-- ===================== Carousel Initialization ===================== -->
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  bulmaCarousel.attach('#results-carousel', {
+
+    slidesToScroll: 1,
+    slidesToShow: 1,
+
+    loop: true,
+
+    autoplay: true,
+    autoplaySpeed: 3000,
+
+    pauseOnHover: true,
+
+    pagination: true,
+    navigation: true,
+
+    infinite: true,
+
+  });
+
+});
+
+</script>
 
     <section class="section">
       <div class="container is-max-desktop">
